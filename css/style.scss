@@ -1,0 +1,105 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #FFEEEB;
+$subColor: #7F544F;
+$keyColor: #FFA89F;
+$fontColor: #5c5c5c;
+
+
+/*base
+-------------------------------------------*/
+
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 20%), lighten($keyColor, 10%), darken($keyColor, 5%));
+  text-decoration: none;
+}
+
+/*header
+--------------------------------------------------------*/
+header{
+    .hd-img{
+        background-image: url("../images/neko.jpg");
+        height: 500px;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+main{
+    margin: 30px;
+    h1{
+        text-align: center;
+        margin: 10px;
+        font-size: 1.8rem;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        
+        .col{
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            flex: 1;
+            
+            h2{
+               font-size: 1.6rem;
+               color: $keyColor;
+            }
+            p{
+                margin-top: 10px;
+            }
+        }
+    }
+}
+footer{
+    background-color: $subColor;
+    padding: 25px;
+    text-align: center;
+    
+    p{
+        margin-bottom: 10px;
+        color: white;
+    }
+    .ft-btn{
+        background-color: white;
+        border-radius: 8px;
+        padding: 10px 50px;
+    }
+}
+
+
+/* mobil
+=======================================================*/
+@media (max-width: 768px) {
+    .hd-img{
+        max-height: 250px;
+        width: 100%;
+    }
+    
+    main{
+        .container{
+            flex-direction: column;
+        }
+    }
+    footer{
+        .ft-btn{
+            padding: 10px 100px;
+        }
+    }
+}

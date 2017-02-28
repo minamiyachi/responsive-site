@@ -1,0 +1,80 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+/*base
+-------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #5c5c5c;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #FFEEEB; }
+
+a {
+  color: #FFA89F;
+  text-decoration: none; }
+  a:visited {
+    color: #ff9186; }
+  a:hover {
+    color: #ff4c39; }
+  a:active {
+    color: #ffd6d2; }
+
+/*header
+--------------------------------------------------------*/
+header .hd-img {
+  background-image: url("../images/neko.jpg");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
+
+main {
+  margin: 30px; }
+  main h1 {
+    text-align: center;
+    margin: 10px;
+    font-size: 1.8rem; }
+  main .container {
+    display: flex;
+    flex-direction: row; }
+    main .container .col {
+      background-color: white;
+      margin: 10px;
+      padding: 20px;
+      flex: 1; }
+      main .container .col h2 {
+        font-size: 1.6rem;
+        color: #FFA89F; }
+      main .container .col p {
+        margin-top: 10px; }
+
+footer {
+  background-color: #7F544F;
+  padding: 25px;
+  text-align: center; }
+  footer p {
+    margin-bottom: 10px;
+    color: white; }
+  footer .ft-btn {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 50px; }
+
+/* mobil
+=======================================================*/
+@media (max-width: 768px) {
+  .hd-img {
+    max-height: 250px;
+    width: 100%; }
+
+  main .container {
+    flex-direction: column; }
+
+  footer .ft-btn {
+    padding: 10px 100px; } }
+
+/*# sourceMappingURL=style.css.map */
